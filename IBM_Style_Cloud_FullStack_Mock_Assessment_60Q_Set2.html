@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IBM-Style Cloud Full Stack Mock Assessment - Set 2</title>
+<style>
+:root { --bg:#f4f7fb; --card:#fff; --text:#172033; --muted:#667085; --accent:#2457d6; --ok:#16824b; --bad:#cf2f38; --border:#dfe4ee; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; background:var(--bg); color:var(--text); }
+header { background:#111827; color:white; padding:18px 24px; position:sticky; top:0; z-index:5; box-shadow:0 2px 12px #0002; }
+.header-row { max-width:1000px; margin:auto; display:flex; gap:16px; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+h1 { font-size:20px; margin:0; } .sub { color:#cbd5e1; font-size:13px; margin-top:4px; }
+.timer { font-size:24px; font-weight:800; background:#fff1; padding:8px 12px; border-radius:10px; min-width:105px; text-align:center; }
+main { max-width:1000px; margin:24px auto; padding:0 16px 48px; }
+.top { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:16px; }
+.stat { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px; }
+.stat b { display:block; font-size:20px; } .muted { color:var(--muted); font-size:12px; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; box-shadow:0 6px 20px #0b153008; }
+.meta { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:16px; flex-wrap:wrap; }
+.badge { display:inline-block; background:#edf2ff; color:#234bb5; border-radius:999px; padding:6px 10px; font-size:12px; font-weight:700; }
+.progress { height:9px; background:#e9edf5; border-radius:999px; overflow:hidden; margin:8px 0 18px; }
+.progress > div { height:100%; background:var(--accent); width:0; transition:.2s; }
+.q { font-size:21px; line-height:1.45; margin:8px 0 20px; }
+.option { display:block; width:100%; text-align:left; padding:15px; margin:10px 0; border:1px solid var(--border); background:white; border-radius:12px; cursor:pointer; font-size:15px; transition:.15s; }
+.option:hover { border-color:#98a7c4; background:#f9fbff; }
+.option.selected { border-color:var(--accent); background:#eef3ff; }
+.option.correct { border-color:var(--ok); background:#eaf8f0; }
+.option.wrong { border-color:var(--bad); background:#fff0f1; }
+.controls { display:flex; justify-content:space-between; margin-top:22px; gap:10px; }
+button { border:0; border-radius:10px; padding:12px 17px; font-weight:700; cursor:pointer; }
+.btn-secondary { background:#e8ecf4; color:#273044; } .btn-primary { background:var(--accent); color:#fff; }
+.btn-danger { background:var(--bad); color:white; }
+button:disabled { opacity:.45; cursor:not-allowed; }
+#result { display:none; }
+.result-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:16px 0; }
+.review { margin-top:18px; border-top:1px solid var(--border); padding-top:16px; }
+.review-item { padding:14px; border:1px solid var(--border); border-radius:12px; margin:10px 0; }
+.review-item.ok { border-left:5px solid var(--ok); } .review-item.bad { border-left:5px solid var(--bad); } .review-item.na { border-left:5px solid #98a2b3; }
+.small { font-size:13px; color:var(--muted); } .explain { margin-top:8px; line-height:1.5; }
+.notice { background:#fff8e6; border:1px solid #f3d38a; padding:12px; border-radius:10px; font-size:13px; margin-bottom:16px; }
+@media (max-width:700px) { .top,.result-grid { grid-template-columns:1fr 1fr; } .q { font-size:18px; } }
+</style>
+</head>
+<body>
+<header><div class="header-row">
+<div><h1>IBM-Style Cloud Full Stack Mock Assessment — Set 2</h1><div class="sub">60 original questions · 60 minutes · one-at-a-time mode</div></div>
+<div class="timer" id="timer">60:00</div>
+</div></header>
+
+<main>
+<div class="notice"><b>Practice notice:</b> These are original IBM-style questions based on the curriculum you provided; they are not official or leaked IBM assessment questions.</div>
+
+<section id="exam">
+<div class="top">
+<div class="stat"><span class="muted">Question</span><b id="qnum">1 / 60</b></div>
+<div class="stat"><span class="muted">Answered</span><b id="answered">0</b></div>
+<div class="stat"><span class="muted">Accuracy</span><b id="accuracy">—</b></div>
+</div>
+
+<div class="card">
+<div class="meta"><span class="badge" id="topic">Java</span><span class="small">Selected answer is locked after Next</span></div>
+<div class="progress"><div id="bar"></div></div>
+<div class="q" id="question"></div>
+<div id="options"></div>
+<div class="controls">
+<button class="btn-secondary" id="prev">Previous</button>
+<div style="display:flex;gap:10px;">
+<button class="btn-danger" id="submit">Submit Test</button>
+<button class="btn-primary" id="next">Next</button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="result" class="card">
+<h2>Assessment Result</h2>
+<div class="result-grid">
+<div class="stat"><span class="muted">Score</span><b id="rscore"></b></div>
+<div class="stat"><span class="muted">Percentage</span><b id="rpercent"></b></div>
+<div class="stat"><span class="muted">Correct</span><b id="rcorrect"></b></div>
+<div class="stat"><span class="muted">Wrong</span><b id="rwrong"></b></div>
+</div>
+<div class="result-grid">
+<div class="stat"><span class="muted">Unanswered</span><b id="runanswered"></b></div>
+<div class="stat"><span class="muted">Time Used</span><b id="rtime"></b></div>
+<div class="stat"><span class="muted">Attempt Rate</span><b id="rattempt"></b></div>
+<div class="stat"><span class="muted">Status</span><b id="rstatus"></b></div>
+</div>
+<h3>Topic-wise performance</h3>
+<div id="topicStats"></div>
+<div class="review"><h3>Question Review</h3><div id="reviewList"></div></div>
+<button class="btn-primary" onclick="location.reload()">Restart Set 2</button>
+</section>
+</main>
+
+<script>
+const questions = [{"topic": "Java", "q": "What is the output of this code? `List<Integer> a = Arrays.asList(1,2,3,4); System.out.println(a.stream().filter(x -> x % 2 == 0).mapToInt(Integer::intValue).sum());`", "opts": ["4", "6", "10", "12"], "ans": 1, "exp": "The even values are 2 and 4, so their sum is 6."}, {"topic": "Java", "q": "Which statement about `HashMap` in Java is correct?", "opts": ["It preserves insertion order", "It allows one null key and multiple null values", "It is synchronized by default", "It sorts keys automatically"], "ans": 1, "exp": "HashMap permits one null key and multiple null values and is not synchronized by default."}, {"topic": "Java", "q": "Which mechanism is most appropriate when several threads must atomically increment a shared integer without using a lock?", "opts": ["StringBuilder", "AtomicInteger", "ThreadLocal", "Optional<Integer>"], "ans": 1, "exp": "AtomicInteger provides atomic operations such as incrementAndGet()."}, {"topic": "Java", "q": "What is the main purpose of the `volatile` keyword?", "opts": ["To make compound operations atomic", "To guarantee visibility of writes across threads", "To prevent object creation", "To serialize an object"], "ans": 1, "exp": "volatile guarantees visibility and ordering for reads/writes of the variable, but does not make compound operations atomic."}, {"topic": "Java", "q": "Which exception is checked at compile time?", "opts": ["NullPointerException", "IllegalArgumentException", "IOException", "ArithmeticException"], "ans": 2, "exp": "IOException is a checked exception and must be handled or declared."}, {"topic": "Java", "q": "Which collection is generally best suited for frequent insertion/removal at both ends?", "opts": ["ArrayList", "ArrayDeque", "TreeSet", "HashSet"], "ans": 1, "exp": "ArrayDeque is designed for efficient insertion/removal at both ends."}, {"topic": "Java", "q": "In Java, which functional interface represents a function that accepts one argument and returns a result?", "opts": ["Consumer<T>", "Supplier<T>", "Function<T,R>", "Predicate<T>"], "ans": 2, "exp": "Function<T,R> accepts one input and returns a result."}, {"topic": "Java", "q": "What does `equals()`/`hashCode()` contract require for objects used as HashMap keys?", "opts": ["Equal objects must have different hash codes", "Equal objects must have the same hash code", "hashCode must be unique", "equals must compare object identity only"], "ans": 1, "exp": "If a.equals(b) is true, a.hashCode() must equal b.hashCode()."}, {"topic": "HTML/CSS/Bootstrap", "q": "Which HTML element is semantically best for the primary navigation links of a site?", "opts": ["<section>", "<nav>", "<aside>", "<header>"], "ans": 1, "exp": "The nav element represents a major set of navigation links."}, {"topic": "HTML/CSS/Bootstrap", "q": "What does `box-sizing: border-box` change?", "opts": ["Margins are included in width", "Padding and border are included in the declared width/height", "The element becomes inline", "The element cannot overflow"], "ans": 1, "exp": "With border-box, the declared width/height includes content, padding, and border."}, {"topic": "HTML/CSS/Bootstrap", "q": "Which CSS selector has the highest specificity?", "opts": [".card .title", "#app .title", "div.title", "[data-role='x']"], "ans": 1, "exp": "An ID selector contributes more specificity than class, attribute, or element selectors."}, {"topic": "HTML/CSS/Bootstrap", "q": "In Bootstrap 5, which class makes a container span the full available width?", "opts": ["container-fluid", "container-full", "w-auto-container", "fluid-container"], "ans": 0, "exp": "Bootstrap provides .container-fluid for a full-width responsive container."}, {"topic": "HTML/CSS/Bootstrap", "q": "Which CSS layout model is generally the most direct choice for aligning items along one dimension?", "opts": ["Flexbox", "Float layout", "Table layout", "Absolute positioning"], "ans": 0, "exp": "Flexbox is designed for one-dimensional row/column alignment."}, {"topic": "HTML/CSS/Bootstrap", "q": "What is the main benefit of using a `<label for='id'>` associated with a form control?", "opts": ["It encrypts the input", "It improves accessibility and enlarges the clickable target", "It disables browser validation", "It makes the input read-only"], "ans": 1, "exp": "The association helps assistive technology and lets users activate the control by clicking the label."}, {"topic": "JavaScript", "q": "What is the result of `console.log(typeof null)` in JavaScript?", "opts": ["null", "object", "undefined", "number"], "ans": 1, "exp": "Due to a long-standing JavaScript behavior, typeof null returns 'object'."}, {"topic": "JavaScript", "q": "Which statement about `let` and `var` is correct?", "opts": ["let is function-scoped", "var is block-scoped", "let is block-scoped", "Both are identical in scope"], "ans": 2, "exp": "let and const are block-scoped; var is function-scoped."}, {"topic": "JavaScript", "q": "What does `Promise.all()` do when one of its promises rejects?", "opts": ["Waits for all and returns only fulfilled values", "Immediately rejects the combined promise", "Converts rejection into null", "Retries the failed promise automatically"], "ans": 1, "exp": "Promise.all rejects as soon as any input promise rejects."}, {"topic": "JavaScript", "q": "Which operator performs nullish coalescing?", "opts": ["||", "??", "&&", "::"], "ans": 1, "exp": "The ?? operator uses the right-hand side only when the left side is null or undefined."}, {"topic": "JavaScript", "q": "What is a closure?", "opts": ["A function with access to variables from its lexical scope after that scope has returned", "A class constructor only", "A browser security policy", "A promise that has completed"], "ans": 0, "exp": "A closure retains access to bindings from its lexical environment."}, {"topic": "JavaScript", "q": "Which array method returns a new array containing elements that pass a test?", "opts": ["forEach", "filter", "find", "some"], "ans": 1, "exp": "filter returns a new array of elements for which the callback returns true."}, {"topic": "JavaScript", "q": "What is the output of `console.log(0 == false, 0 === false)`?", "opts": ["true true", "false false", "true false", "false true"], "ans": 2, "exp": "Loose equality coerces types, while strict equality does not."}, {"topic": "Angular", "q": "Which Angular feature is primarily used for dependency injection?", "opts": ["NgModule metadata only", "Injectable providers", "Pipes", "Directives only"], "ans": 1, "exp": "Angular's DI system uses providers, commonly declared through @Injectable and provider configuration."}, {"topic": "Angular", "q": "What is the key difference between `Subject` and `BehaviorSubject` in RxJS?", "opts": ["BehaviorSubject cannot emit multiple values", "BehaviorSubject stores the latest value and emits it to new subscribers", "Subject is always synchronous", "BehaviorSubject cannot be subscribed to"], "ans": 1, "exp": "BehaviorSubject keeps the current value and immediately emits it to a new subscriber."}, {"topic": "Angular", "q": "Which lifecycle hook is commonly used after Angular has initialized component input properties?", "opts": ["ngOnInit", "ngOnDestroy", "ngAfterViewChecked", "ngDoCheck"], "ans": 0, "exp": "ngOnInit runs once after Angular initializes data-bound input properties."}, {"topic": "Angular", "q": "Which Angular mechanism is best suited for modifying an outgoing HTTP request globally?", "opts": ["Route guard", "HTTP interceptor", "Pipe", "Component decorator"], "ans": 1, "exp": "HTTP interceptors can inspect and modify outgoing requests and incoming responses."}, {"topic": "Angular", "q": "What does `trackBy` in an `*ngFor` help Angular optimize?", "opts": ["HTTP retries", "DOM updates when list items change", "Bundle compression", "Route authentication"], "ans": 1, "exp": "trackBy provides stable identities so Angular can minimize DOM recreation."}, {"topic": "Angular", "q": "Which form type is generally more scalable for complex dynamic forms?", "opts": ["Template-driven only", "Reactive forms", "Static HTML forms", "GET forms"], "ans": 1, "exp": "Reactive forms provide explicit, programmatic control and work well for complex dynamic validation."}, {"topic": "Angular", "q": "Which RxJS operator is typically used to ignore rapid repeated search keystrokes until the user pauses?", "opts": ["debounceTime", "mergeMap", "scan", "reduce"], "ans": 0, "exp": "debounceTime delays emissions until the specified quiet period has elapsed."}, {"topic": "Angular", "q": "What is lazy loading mainly intended to improve?", "opts": ["Database normalization", "Initial application load by loading feature code on demand", "CSS specificity", "Server CPU only"], "ans": 1, "exp": "Lazy-loaded routes reduce the amount of JavaScript needed for the initial load."}, {"topic": "React", "q": "Why is a `key` prop important when rendering a list in React?", "opts": ["It encrypts list items", "It helps React identify which items changed", "It makes components stateful", "It prevents all rerenders"], "ans": 1, "exp": "Keys provide stable identity so React can reconcile list changes efficiently."}, {"topic": "React", "q": "Which hook is intended for side effects such as subscribing to an external system?", "opts": ["useMemo", "useEffect", "useRef", "useId"], "ans": 1, "exp": "useEffect is the standard hook for side effects."}, {"topic": "React", "q": "What does `useMemo` primarily provide?", "opts": ["A persistent server cache", "Memoization of a computed value between renders", "Automatic state synchronization", "Routing"], "ans": 1, "exp": "useMemo caches a computed value until one of its dependencies changes."}, {"topic": "React", "q": "A controlled input in React gets its displayed value primarily from:", "opts": ["The DOM only", "React state/props", "CSS", "The browser cache"], "ans": 1, "exp": "Controlled components derive their value from React state and update via event handlers."}, {"topic": "React", "q": "Which statement about React state updates is most accurate?", "opts": ["State updates are always synchronous", "React may batch state updates for performance", "State can only be updated once per component", "setState mutates the previous state object directly"], "ans": 1, "exp": "Modern React batches many state updates to reduce unnecessary rendering."}, {"topic": "React", "q": "What is the main purpose of React Context?", "opts": ["To replace all state management", "To pass values through the component tree without manually threading props through every level", "To make API calls automatically", "To compile JSX"], "ans": 1, "exp": "Context provides a way to share values such as theme or auth data across a component subtree."}, {"topic": "React", "q": "Which pattern is most appropriate when the next state depends on the previous state?", "opts": ["setCount(count + 1) always", "setCount(prev => prev + 1)", "setCount(() => null)", "forceUpdate()"], "ans": 1, "exp": "The functional updater uses the latest previous state safely."}, {"topic": "MongoDB", "q": "Which MongoDB feature is used to ensure multiple document operations are committed atomically as a unit?", "opts": ["Aggregation pipeline", "Multi-document transaction", "TTL index", "Text index"], "ans": 1, "exp": "MongoDB supports multi-document transactions for atomic transactional workflows."}, {"topic": "MongoDB", "q": "Which index best supports queries filtering on both `status` and `createdAt` when both fields are frequently used together?", "opts": ["A compound index on status and createdAt", "A text index only", "A wildcard index always", "No index can help"], "ans": 0, "exp": "A compound index can efficiently support common multi-field query patterns when field order is chosen appropriately."}, {"topic": "MongoDB", "q": "Which aggregation stage is commonly used to filter documents early in a pipeline?", "opts": ["$match", "$group", "$project", "$lookup"], "ans": 0, "exp": "$match filters documents and is often pushed early to reduce later processing."}, {"topic": "MongoDB", "q": "What does `$lookup` primarily provide?", "opts": ["Document deletion", "A join-like operation between collections", "Index rebuilding", "Sharding configuration"], "ans": 1, "exp": "$lookup performs a left outer join-like operation within an aggregation pipeline."}, {"topic": "MongoDB", "q": "Which statement best describes embedding vs referencing in MongoDB?", "opts": ["Embedding is always better", "Referencing is always better", "The choice depends on access patterns, cardinality, and document size", "MongoDB requires normalized schemas"], "ans": 2, "exp": "MongoDB schema design is driven by application access patterns and relationship characteristics."}, {"topic": "MongoDB", "q": "What is the purpose of a TTL index?", "opts": ["Automatically expire documents after a configured time", "Encrypt fields", "Prevent duplicates on all fields", "Compress collections"], "ans": 0, "exp": "TTL indexes can automatically remove documents after the configured expiration time."}, {"topic": "MongoDB", "q": "Which command/operation is commonly used to inspect how MongoDB plans to execute a query?", "opts": ["explain()", "describeAll()", "plan()", "traceQuery()"], "ans": 0, "exp": "The explain() method provides query planner and execution statistics."}, {"topic": "Spring Core/AOP/Testing", "q": "Which Spring bean scope creates one bean instance per IoC container?", "opts": ["prototype", "request", "singleton", "session"], "ans": 2, "exp": "Singleton is the default Spring bean scope and creates one instance per container."}, {"topic": "Spring Core/AOP/Testing", "q": "What is constructor injection generally preferred for?", "opts": ["Making dependencies explicit and supporting immutability", "Allowing fields to remain null", "Avoiding interfaces", "Disabling testing"], "ans": 0, "exp": "Constructor injection clearly expresses required dependencies and makes immutable design easier."}, {"topic": "Spring Core/AOP/Testing", "q": "Which annotation marks a class as a Spring component eligible for component scanning?", "opts": ["@Component", "@Autowired", "@BeanFactory", "@ProfileOnly"], "ans": 0, "exp": "@Component marks a class for component scanning; @Service and @Repository are specialized stereotypes."}, {"topic": "Spring Core/AOP/Testing", "q": "In Spring AOP, a pointcut primarily defines:", "opts": ["What advice code does", "Where advice should be applied", "How beans are serialized", "How transactions are stored"], "ans": 1, "exp": "A pointcut identifies join points where advice should run."}, {"topic": "Spring Core/AOP/Testing", "q": "Which Spring testing annotation is most suitable for loading the application context for an integration-style test?", "opts": ["@SpringBootTest", "@OnlyUnitTest", "@ContextDisabled", "@NoSpring"], "ans": 0, "exp": "@SpringBootTest loads the Spring application context and is commonly used for integration tests."}, {"topic": "Spring DAO/Hibernate", "q": "What is the primary purpose of `@Transactional` in a Spring service method?", "opts": ["Define transaction boundaries", "Create database tables automatically in every call", "Serialize Java objects", "Disable rollback"], "ans": 0, "exp": "@Transactional declaratively defines transaction behavior and boundaries."}, {"topic": "Spring DAO/Hibernate", "q": "Which Hibernate issue occurs when a lazy relationship is accessed after the persistence session is closed?", "opts": ["BeanCreationException", "LazyInitializationException", "ClassCastException", "DuplicateKeyException"], "ans": 1, "exp": "Accessing an unfetched lazy association outside the active persistence context can cause LazyInitializationException."}, {"topic": "Spring DAO/Hibernate", "q": "Which JPA annotation identifies the primary key field of an entity?", "opts": ["@ColumnKey", "@Id", "@Primary", "@EntityKey"], "ans": 1, "exp": "@Id marks the entity identifier."}, {"topic": "Spring Boot/REST", "q": "Which dependency is typically used to build REST APIs with Spring Boot?", "opts": ["spring-boot-starter-web", "spring-boot-starter-mail-only", "spring-boot-starter-thymeleaf-only", "spring-boot-starter-batch-only"], "ans": 0, "exp": "spring-boot-starter-web provides Spring MVC and the embedded web server stack commonly used for REST APIs."}, {"topic": "Spring Boot/REST", "q": "Which HTTP status is most appropriate when a new resource is successfully created?", "opts": ["200 OK", "201 Created", "204 No Content", "304 Not Modified"], "ans": 1, "exp": "201 Created is the standard response for successful resource creation."}, {"topic": "Spring Boot/REST", "q": "What is the main purpose of `@ControllerAdvice`?", "opts": ["Global controller-related exception handling and cross-cutting behavior", "Database indexing", "JWT encryption", "Static file bundling"], "ans": 0, "exp": "@ControllerAdvice allows centralized exception handling and related controller-wide concerns."}, {"topic": "Spring Boot/REST", "q": "Which property is commonly used in Spring Boot to expose selected Actuator endpoints over HTTP?", "opts": ["management.endpoints.web.exposure.include", "spring.actuator.http.all", "actuator.expose.everything", "management.enable.rest"], "ans": 0, "exp": "Spring Boot Actuator uses management.endpoints.web.exposure.include/exclude for web endpoint exposure."}, {"topic": "Microservices", "q": "What is the main responsibility of an API Gateway in a microservices architecture?", "opts": ["Store all business data", "Provide a single entry point for routing and cross-cutting concerns", "Replace every microservice", "Act as a database driver"], "ans": 1, "exp": "API gateways commonly handle routing, authentication, rate limiting, aggregation, and other edge concerns."}, {"topic": "Microservices", "q": "Which pattern helps prevent repeated calls to an unhealthy downstream service?", "opts": ["Circuit breaker", "Singleton", "Builder", "Observer"], "ans": 0, "exp": "A circuit breaker fails fast and can allow recovery instead of repeatedly hammering a failing dependency."}, {"topic": "Microservices", "q": "Which approach is commonly used to achieve eventual consistency across independently owned microservice databases?", "opts": ["Distributed shared table", "Saga pattern", "Global synchronized cache only", "Single database transaction across all services"], "ans": 1, "exp": "Saga coordinates a sequence of local transactions with compensating actions where needed."}, {"topic": "DevOps", "q": "Which Docker instruction defines the default command that runs when a container starts?", "opts": ["COPY", "CMD", "LABEL", "WORKDIR"], "ans": 1, "exp": "CMD specifies the default command and arguments for a container."}, {"topic": "DevOps", "q": "In CI/CD, what is the main purpose of a pipeline stage that runs automated tests before deployment?", "opts": ["Increase manual steps", "Catch regressions before changes reach later environments", "Disable version control", "Replace monitoring"], "ans": 1, "exp": "Automated tests provide an early quality gate before promotion or deployment."}];
+let idx=0, answers=Array(questions.length).fill(null), start=Date.now(), submitted=false;
+let remaining=3600, timerHandle=null;
+
+function render(){
+  const q=questions[idx];
+  document.getElementById('qnum').textContent=`${idx+1} / ${questions.length}`;
+  document.getElementById('topic').textContent=q.topic;
+  document.getElementById('question').textContent=q.q;
+  document.getElementById('bar').style.width=`${((idx+1)/questions.length)*100}%`;
+  const box=document.getElementById('options'); box.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button'); b.className='option'; b.textContent=`${String.fromCharCode(65+i)}. ${o}`;
+    if(answers[idx]===i) b.classList.add('selected');
+    if(submitted){
+      if(i===q.ans) b.classList.add('correct');
+      if(answers[idx]===i && i!==q.ans) b.classList.add('wrong');
+      b.disabled=true;
+    } else b.onclick=()=>{answers[idx]=i; render();};
+    box.appendChild(b);
+  });
+  const attempted=answers.filter(x=>x!==null).length;
+  const correct=answers.reduce((s,a,j)=>s+(a===questions[j].ans?1:0),0);
+  document.getElementById('answered').textContent=attempted;
+  document.getElementById('accuracy').textContent=attempted?`${Math.round(correct/attempted*100)}%`:'—';
+  document.getElementById('prev').disabled=idx===0 || submitted;
+  document.getElementById('next').disabled=submitted;
+}
+
+function updateTimer(){
+  remaining--;
+  const m=Math.floor(remaining/60), s=remaining%60;
+  document.getElementById('timer').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  if(remaining<=0) submitTest(true);
+}
+
+function submitTest(auto=false){
+  if(submitted) return;
+  submitted=true; clearInterval(timerHandle);
+  const correct=questions.reduce((s,q,i)=>s+(answers[i]===q.ans?1:0),0);
+  const wrong=questions.reduce((s,q,i)=>s+(answers[i]!==null && answers[i]!==q.ans?1:0),0);
+  const unanswered=questions.length-correct-wrong;
+  const attempted=correct+wrong;
+  const pct=correct/questions.length*100;
+  document.getElementById('exam').style.display='none';
+  document.getElementById('result').style.display='block';
+  document.getElementById('rscore').textContent=`${correct} / ${questions.length}`;
+  document.getElementById('rpercent').textContent=`${pct.toFixed(1)}%`;
+  document.getElementById('rcorrect').textContent=correct;
+  document.getElementById('rwrong').textContent=wrong;
+  document.getElementById('runanswered').textContent=unanswered;
+  document.getElementById('rattempt').textContent=`${Math.round(attempted/questions.length*100)}%`;
+  const used=Math.min(3600,3600-remaining), um=Math.floor(used/60), us=used%60;
+  document.getElementById('rtime').textContent=`${um}m ${us}s`;
+  document.getElementById('rstatus').textContent=pct>=70?'Strong practice result':'Keep practicing';
+
+  const topics=[...new Set(questions.map(q=>q.topic))];
+  document.getElementById('topicStats').innerHTML=topics.map(t=>{
+    const inds=questions.map((q,i)=>q.topic===t?i:-1).filter(i=>i>=0);
+    const c=inds.filter(i=>answers[i]===questions[i].ans).length;
+    const a=inds.filter(i=>answers[i]!==null).length;
+    return `<div style="margin:10px 0"><b>${t}</b><div class="small">${c} / ${inds.length} correct · ${a?Math.round(c/a*100):0}% accuracy on attempted · ${inds.length-a} unanswered</div>
+    <div class="progress"><div style="width:${c/inds.length*100}%"></div></div></div>`;
+  }).join('');
+
+  document.getElementById('reviewList').innerHTML=questions.map((q,i)=>{
+    const a=answers[i], cls=a===null?'na':a===q.ans?'ok':'bad';
+    const your=a===null?'Not answered':q.opts[a];
+    return `<div class="review-item ${cls}"><b>Q${i+1} · ${q.topic}</b><div style="margin-top:6px">${q.q}</div>
+      <div class="small" style="margin-top:7px">Your answer: ${your}</div>
+      <div class="small">Correct answer: ${q.opts[q.ans]}</div>
+      <div class="explain"><b>Explanation:</b> ${q.exp}</div></div>`;
+  }).join('');
+  render();
+  if(auto) alert('Time is up. Your test has been submitted automatically.');
+}
+
+document.getElementById('next').onclick=()=>{ if(idx<questions.length-1){idx++;render();} else submitTest(false); };
+document.getElementById('prev').onclick=()=>{ if(idx>0){idx--;render();} };
+document.getElementById('submit').onclick=()=>{ if(confirm('Submit the test now? You will not be able to change answers.')) submitTest(false); };
+render();
+timerHandle=setInterval(updateTimer,1000);
+</script>
+</body>
+</html>
