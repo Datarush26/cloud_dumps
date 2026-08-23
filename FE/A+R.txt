@@ -1,0 +1,385 @@
+The string "api/route" in Express is an example of a...
+A. Middleware
+B .Route
+C. Error Handler
+ANS : B
+
+2. Which library allows the use of the "require" keyword in front-end code?
+A. guid
+B. Browserify
+C. React
+D. jQuery
+
+ANS : B
+
+3. The ______ attribute of a React form is called when the main action button inside the form is pressed.
+A. onSubmit
+B. onChange
+C. onComplete
+ANS : A
+
+4. Which of the following are automation tools?
+A. Gulp
+B. JSX
+C. Express
+ANS : A
+
+5. Which of the following is not a method of a dispatcher?
+A. register
+B. vector
+C. dispatch
+
+ANS : B
+
+6. What React function is used to define a new element tag?
+A. renderComponent
+B. createClass
+C. setInnerHTML
+ANS : B
+
+7. Isomorphic means to focus exclusively on an app's back-end.
+A. True
+B. False
+ANS : B
+
+8. React's abstraction of the document object model is often called...
+A. Virtual DOM
+B. Meta DOM
+C. Virtualized Model
+ANS : A
+
+9. True or false : The only thing that can change the data inside a store is the store itself.
+A. false
+B. true
+ANS : B
+
+10.
+The Gulp task which takes a stream and outputs a file is...
+A. src
+B. task
+C. dest
+ANS : C
+
+11. The best way to detect when a user has completed a form is
+A. to handle the onClick event on the form's submit element
+B. to handle the onBlur event of the last form element
+C. to handle the form's onSubmit event
+D. to accumulate the onChange events for each form element
+ANS : C
+
+
+12. React is
+A A library that represents asynchronous data streams with observables
+B A comprehensive client-side application framework
+C An optimizing compiler for JavaScript
+D A client-side library providing rendering and event handling
+
+ANS : D
+
+13. Routing can be added to a React application by
+A. adding an HTML5 or hash fragment based routing library
+B. rendering the application on the server using react-page
+C. handling the window.onLocationChanged event
+D. using the React.route function
+ANS : A
+
+14. Behavior is shared between components using
+A. propTypes
+B. state
+C. mixins
+D. props
+ANS : C
+
+15. An advantage of React is
+A. jQuery syntax
+B. static type checking
+C. speed
+D. easy integration with other JavaScript libraries
+ANS : C
+
+16. The JSX pre-processor is packaged as a
+A. dynamic link library
+B. Nuget package
+C. Gem
+D. npm module
+ANS : D
+
+17. The just-in-time JSX transformer is good for
+A. integrating with JavaScript tools
+B. simple development workflow
+C. reusing behavior
+D. performance
+ANS : B
+
+18. The function that creates React components is
+A. React.component.extend
+B. React.createComponent
+C. React.renderComponent
+D. React.createClass
+ANS : D
+
+19. How does React Router make URL params accessible to components?
+A. parseUrlParams
+B. State
+C. getUrlParams
+D. Props
+ANS : D
+
+20. Why is the Link component useful?
+A. It allows you to hyperlink to routes by name
+B. It enhances page load performance
+C. It removes invalid characters from the URL
+D. It provides faster navigation than hyperlinks
+ANS : A
+
+21. How do Flux stores find out about Flux actions?
+A. They query the server via AJAX
+B. They poll HTML5 localstorage
+C. They register a callback with the dispatcher.
+D. They call action creators directly
+ANS : C
+
+22. Where should mutable data for React components be stored?
+A. props
+B. reactData
+C. state
+D. React.cookie
+ANS : C
+
+23. What mechanism is recommended for passing data down to child components in React?
+A. props
+B. sendChildData
+C. getDefaultProps
+D. state
+ANS : A
+
+24. What is JSX?
+A. A language that looks like JavaScript that compiles to HTML.
+B. A styling language that compiles down to CSS.
+C. A language for querying RESTful web services.
+D. A language that looks like HTML that compiles down to JavaScript.
+ANS : D
+
+25. What function should all your JSX be placed in?
+A. render
+B. compile
+C. jsx
+D. emit
+ANS : A
+
+
+Q 1 Which features does TypeScript support natively?
+
+
+
+Support for standard JavaScript code
+Classes and modules
+Static typing
+Interfaces
+Constructors
+
+F. All of the above
+
+
+ANS : F
+
+Q 2. Which of the following is not a type keyword in TypeScript?
+
+float
+
+bool
+
+all are valid types in TypeScript
+
+number
+
+string
+
+ANS : float
+
+
+
+Q 3. Interfaces defined in TypeScript are included in the JavaScript that is generated?
+
+True
+False
+ANS : B
+
+
+
+Q 4.How do you extend an interface in TypeScript?
+
+interface ITruckOptions extends IAutoOptions
+interface ITruckOptions => IAutoOptions
+interface ITruckOptions : IAutoOptions
+interface ITruckOptions implements IAutoOptions
+ANS : A
+
+
+
+Q 5. Benefits offered by TypeScript include:
+
+Code encapsulation
+All of these
+More maintainable code
+Strongly-typed code
+ANS :B
+
+
+
+Q 6. How do you automatically generate fields in a TypeScript class?
+
+Add the public keyword to a constructor parameter
+None of these
+Use the auto keyword
+TypeScript doesn't support automatically generated fields
+ANS : A
+
+
+
+Q 7.Which TypeScript function will accept 2 parameters that must be numbers and return their product?
+
+var func = (x: number, y: number) => x * y;
+var func = (x, y) => x * y;
+None of these
+var func = function(x, y) => x * y;
+All of these
+ANS : A
+
+
+
+Q 8. Which statement will allow your code to reference an internal module in a file named shapes.ts using TypeScript?
+
+/// <reference="shapes.ts" />
+/// <reference path="shapes.ts" />
+import "shapes"
+/// shapes.ts
+ANS : C
+
+
+
+
+
+Q 9.Which TypeScript statement will import an external module in a file named viewmodels.ts that is in the same folder as your code?
+
+import vm = module(viewmodels);
+import vm = module('../viewmodels');
+import module('viewmodels');
+import vm = module('viewmodels');
+ANS : D
+
+
+
+Q 10. Which TypeScript compiler parameter will emit JavaScript that is AMD compliant?
+
+--AMD
+--module AMD
+Neither of these
+ANS : B
+
+
+
+
+
+Q 11.What keyword is used to apply all of the properties on one interface to another interface?
+
+implements
+extends
+class
+furthers
+references
+ANS B
+
+
+
+
+
+Q 12.What value will be output at the end of the following code block?
+
+enum Color { Red = 5, Green = 10, Blue = 15 };
+
+
+
+console.log(Color.Green);
+
+2
+Color.Green
+1
+Green
+10
+ANS : E
+Q 13. Which of the following best defines a "class"?
+
+Objects with no implementation details
+Object with no properties or methods
+JSON objects with methods
+Collection of private, reusable functions
+Template for creating objects
+
+
+ANS : E
+
+
+
+
+
+Q 14.What term describes the concept of treating an object as if it were a particular type, even if it weren't declared as that type?
+
+Extension Typing
+Duck Typing
+Interface Typing
+Generic Typing
+Ruby Typing
+ANS : B
+Q 15.What access modifier limits the accessiblity of a class member to its own class and subclasses?
+
+export
+internal
+protected
+private
+sensitive
+ANS : C
+
+
+
+Q 16.What is the primary difference between a generic class and a non-generic class?
+
+Generic classes do not accept constructor parameters.
+Generic classes are always declared abstract.
+Generic class may not implement interfaces.
+Generic classes accept a type parameter.
+Generic classes must inherit from a base class.
+ANS : D
+
+
+
+Q17.Which TypeScript compiler options lets you specify the location of the tsconfig.json file to be used for the compilation?
+
+--project
+--json
+--outDir
+--input
+--source
+ANS : A
+
+
+
+Q 18.Which of the following symbols is used to denote that a function parameter is a rest parameter?
+
+<>
+>>>
+!!
+...
+||
+ANS : D
+Q 19.Which of the following will correctly import the items exported by this export statement?
+
+export { GetUser as GetLibraryUser, GetBook as GetLibraryBook };
+
+import TypeScript from './library';
+import namespace from './library';
+
+import { GetLibraryUser, GetLibraryBook } from './library';
+import { GetUser, GetBook } from './library';
+import all from './library';
+ANS : C

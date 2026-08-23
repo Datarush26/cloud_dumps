@@ -1,0 +1,370 @@
+Q 6. How do you automatically generate fields in a TypeScript class?
+A.Add the public keyword to a constructor parameter
+B.None of these
+C.Use the auto keyword
+D.TypeScript doesn't support automatically generated fields
+
+Copilot
+The correct answer is D. TypeScript doesn’t support automatically generated fields. Unlike some other languages, TypeScript does not provide built-in automatic field generation based on constructor parameters or any other keywords. Developers need to explicitly define class properties and their initialization within the class body.
+
+
+5.To change the datatype from one type to another,we require
+A.TypeOperator
+B.TypeAssertion
+C.InferredTyping
+ANS : B
+
+
+6.For a variable,Without Specifying any data type is
+A.InferredTyping
+B.TypeOperator
+C.TypeAssertion
+ANS : A
+
+
+typescript file?
+A.ts abc.ts
+B.t abc.ts
+C.tsc abc.ts
+D.tst abc.ts
+ANS : C
+
+
+8.What will be output of : var a:string=47;
+console.log(“Value of a="+a);
+A.Value of a=47
+B.Value of a=0
+C.Value of a=
+D.None of the above
+C
+
+9.Internal Modules are known as namespaces in Typescript.
+A.True
+B.False
+Ans : A
+
+
+11.function fun1(...params) {
+        console.log(params.length);
+     }
+fun1();
+fun1(5);
+fun1(5, 6, 7);
+
+Which concept resemble the above program
+A.String Interpolation
+B.Tagged Templates
+C.Spread Operator/Rest Parameters
+D.Object Destructuring
+ANS : C
+
+
+24) What is async/await?
+A.New syntax to write JavaScript promises
+B.New syntax to consume JavaScript promises
+C.New syntax to consume asynchronous callbacks
+ANS: B
+
+
+25)Which of the following is an attribute css selector?
+A.[selector]
+B. .selector
+C. #selector
+ANS: A
+
+------------------------------------------------------------------------
+26) When is it recommended to pass this.setState a function instead of an object
+A.When the new state should completely replace the old state .
+B.When the new state does not depend on the old state.
+C.When the new state depends on the old state.
+
+
+When using this.setState in React, there are scenarios where passing a function instead of an object is recommended. Let’s explore the options:
+
+A. When the new state should completely replace the old state: In this case, you can directly use an object to update the state. For example:
+
+JavaScript
+
+this.setState({ quantity: 2 });
+AI-generated code. Review and use carefully. More info on FAQ.
+This approach is straightforward and readable.
+
+B. When the new state does not depend on the old state: If the updated state doesn’t rely on the previous state or any other external factors, using an object is sufficient.
+
+C. When the new state depends on the old state: Here’s where passing a function becomes useful. When the updated state relies on the current state (or props), using a function ensures safety and prevents race conditions. For instance:
+
+JavaScript
+
+this.setState((prevState) => ({ counter: prevState.counter + 1 }));
+AI-generated code. Review and use carefully. More info on FAQ.
+In this example, we access the previous state (prevState) to calculate the next state.
+
+In summary:
+
+Use an object when the state update is straightforward.
+Use a function when the update depends on the previous state or props1234.
+Therefore, the correct answer is C. When the new state depends on the old state. 😊
+
+--------------------------------------------------------------------------
+30) Where should you sort and filter data?
+A.In a directive
+B.In a pipe
+C.In your component
+D.In a filter
+ANS: C
+
+
+ 
+33) When bootstrapping an Angular app, how do you specify the main, top-level app component to be used?
+A.You add the component as a package in your SystemJs config.
+B.You load the component directly in your index.html file.
+C.You add the component to the bootstrap array in your main app module.
+D.You load the component directly from your main SystemJs package (e.g. main.ts).
+ANS : C
+ 
+
+35) What syntax do you use to render the App component into an HTML element with id "root"?
+A.ReactDOM.render(App, document.getElementById("root"));
+B.React.render(App, document.getElementById("root"));
+C.ReactDOM.mountNode(<App />, document.getElementById("root"));
+D.ReactDOM.render(<App />, document.getElementById("root"));
+ANS : D
+
+
+38) What is the name of the file that manages TypeScript projects?
+A.tsproj.config
+B.tsmeta.json
+C.tsconfig.json
+D.package.json
+ans C
+
+-------------------------------------------------------------------------
+43) How would you define a string type variable with the value bar in TypeScript? 
+A.let string: foo = 'bar'; 
+B.let foo:string = 'bar';
+C.let string foo = 'bar';
+D.let foo (string) = 'bar';
+
+Copilot
+The correct way to define a string type variable with the value “bar” in TypeScript is:
+
+B. let foo: string = 'bar';
+
+In TypeScript, you declare a variable by specifying its name, followed by a colon and the data type. In this case, we use string as the data type for the variable foo, and then assign the value 'bar' to it. 😊
+------------------------------------------------------------------------
+
+
+ 
+5) What theorem or principal MongoDB follows?
+A.APAC
+B.Always-Sync
+C.ASCII
+D.CAP
+ANS : D
+
+
+8) Upon running the following command, what all the fields will be returned in the output?
+db.collection.find( { qty: { $gt: 6 } }, { name: 1, _id: 0 } )
+A._id
+B.name
+C._id, name
+D.name1, _id0
+ANS : B
+
+
+10) In the following command, what does the second parameter represent?
+db.collection.find( { qty: { $gt: 6 } }, { name: 1, wins: 1 } )
+Read Concern
+Projection
+Write Concern
+Query
+ANS : B
+
+
+3. EventEmitter class’s simple interface, which basically encompass two methods . . . . . . . . . can therefore be used to trigger custom events and listen to events as well, both synchronously or asynchronously.
+A) exit()
+B) superscript()
+C) subscribe()
+D) emit()
+Ans: C
+
+
+5. Three main components of Routing are . . . . . . . . . . .
+A) RouteObject
+B) RouterOutlet
+C) RouterState
+D) RouterLink
+Ans: A,B,D
+
+
+7. To use observables, Angular uses a third-party library called . . . . . . .
+A) ng2-bootstrap
+B) angular-cli
+C) numeral
+D) Reactive Extensions (RxJS)
+Ans: D
+
+
+8. Observables help you manage . . . . . . . . data.
+A) synchronous
+B) asynchronous
+C) Both asynchronous & synchronous
+D) None of above
+Ans: B
+
+
+11. The promise becomes . . . . . . after resolving or rejecting.
+A) mutable
+B) ignored
+C) immutable
+D) recurring
+Ans: C
+
+
+12.Which of the following is not built-in pipe in Angular
+A) DatePipe
+B) CurrencyPipe
+C) DataPipe
+D) PercentPipe
+Ans: C
+
+
+
+13. If you chain multiple pipes together, they are executed . . . . .
+A) in parallel
+B) LIFO order
+C) in the order in which you specify them
+D) none of above
+Ans: C
+
+
+
+1.arithmetic exception and io exception are of which type??runtime error
+
+2.wat r the sequence of java servlet deployment descriptor??
+ans: coding, compiling, deploying
+
+3.which is used to submit query??options: statement
+
+4.abstract method doesn follow which statement??
+options: it instantiates its object
+abstract class shud ve atleas one abstract method
+none of the above
+
+5.wat r the implicit objects in jsp??
+ans: page, this
+
+6. valid status codes ans: 200-299
+
+7. super class of all classes ans: objects
+
+8.which thread method defined all threads? ans: daemon
+
+9.jdbc belongs to which package? ans: java.sql*
+
+10. which is not a primitive datatype? ans: string
+
+11. println belongs to class printstream
+
+12. void method deosnot return value
+
+13. which method reverse the string?? reverse()
+
+14. session belongs to which class?? httpservletrequest
+
+15. frame has default border type and plain has default flow type
+
+16. which interface is used to connect database to application?
+
+17. list of file returns wat? ans:an array of string is returned
+
+18.which is a valid declaration??
+ans: public void int A()-false
+public int test2(int o);
+public void test int(int i,intj);-false
+
+19. public class B()
+static int x;
+psvm()
+{
+sop (B.x);
+}
+ans: prints 0
+
+20.which is not a directive??
+
+21.wat jsp syntax are following scriptlet,expression,directive?
+
+22.<jsp:usebean id="name" class="java.lang.string"><%=name%>
+options: prints 0
+prints null
+compile time error
+none of the above
+
+23.which invoke method will print base class constructor?
+ans: super(10)
+
+24.q18 in previous paper
+
+25.how session object can be destroyed?
+
+26.public class test()
+{static int i,static double d,static char c,static long l,static short s,
+static string s;
+psvm{sop(i+d+c+l+s+S);
+}
+}
+
+27.<%!int i=8%>
+<%int i=10%>
+<%=i>
+options: prints 8, prints 10
+
+28. class.forname() throws class not found exception
+
+29.seek method is used in random access file to specify the new position
+
+30. which is not a valid declaration??
+options: char c=a;
+char d =\u00432;
+char c= \uae262;
+
+31.public class test ()
+static int i=012;
+psvm(srting args[])
+{sop (i);
+}
+ans: prints 10
+
+32.which is not valid?
+ans:int i[] = new int []
+int i [][] = new int[] {1,2}
+
+33.public class B()
+boolean a,b,c;
+boolean =a||(b=true)&&(c=true)
+sop(a+","+b+","+c);
+options: false,false,false
+false,true,true
+
+34.inputstreamreader i=new inputstreamreader (vdscv);
+bufferedreader br = new bufferedreader (i);
+
+35. how ll u create the copy of the same object?? ans: clone()
+
+36.all servlet object implements 1.servlet context 2.web context 3. both 1&2
+
+37.submitting a query is done by ans:statement object
+
+38.which math object is used for pointing 4 while x=4.8
+options: math.ceil,math.floor
+
+39.wat is feature of java?? OOPS
+
+40.how does applet communicate with browser?? ans: init and database document
+
+
+
+
+
+
