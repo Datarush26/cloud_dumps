@@ -1,0 +1,301 @@
+
+14. Pick the correct Java method reference usages.
+a) object::instanceMethod
+b) Class::staticMethod
+c) Class::new
+d) All of the above
+Answer: d) All of the above
+
+. Java Functional Interface can be defined as _____.
+a) Simple Abstract Markup
+b) Simple Active Markup
+c) Single Ambivalue Method
+d) Single Abstract Method
+Answer: d) Single Abstract Method
+
+class First {
+    public First() {
+        System.out.println("F");
+    }
+}
+class Second extends First {
+    public Second() {
+        System.out.println("S");
+    }
+}
+class Third extends Second {
+    public Third() {
+        System.out.println("T");
+    }
+}
+public class TestClass {
+    public static void main(String[] args) {
+        Third c = new Third();
+    }
+}
+a) TSF
+b) T
+c) F
+d) FST
+Answer: d) FST
+
+
+28. Pick the correct Java Stream API’s?
+a) Stream.allMatch
+b) Stream.noneMatch
+c) Stream.anyMatch
+d) All the above
+Answer: d) All the above
+
+What is the return type of Java Lambda expressions?
+a) Void
+b) Lambda
+c) Function
+d) Regex
+Answer: c) Function
+
+HTML  numbers  = <ol>
+
+ Redux is an exclusive feature of the React store ?  
+A. TRUE 
+B. FALSE 
+ANS : B 
+
+
+
+
+
+
+
+14. Pick the correct Java method reference usages.
+a) object::instanceMethod
+b) Class::staticMethod
+c) Class::new
+d) All of the above
+Answer: d) All of the above
+
+
+
+2. ____________ contains the navigation menu, or other navigation functionality for the page 
+A.section 
+B.header 
+C.nav 
+D.aside 
+ANS : C
+
+4. Which of the following are automation tools? 
+A. Gulp 
+B. JSX 
+C. Express 
+ANS : A 
+
+27.Which of the following API is a MUST for every React Component ?  
+A. getInitialState. 
+B. render 
+C.renderComponent. 
+ANS : C.
+
+29. How does React handle the Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) standard ?  
+A. aria -* HTML attributes are fully supported in JSX where most DOM properties and attributes in React are camelCased , these 
+attributes should be lowercase.  
+B. React processes aria - * attributes separately and updates the DOM for accessibility if the user requires it.  
+C. aria-* attributes should be converted to camelCase like other attributes; For example: className, onChange and so on.  
+D. React is yet to support the WAI-ARIA standard.  
+ANS : D.
+
+30. What is React in MVC ?  
+A. Controller 
+B. Middleware  
+C. Model 
+D. Router  
+ANS :- None of these. Updated ans is Controller. Option A 
+31) What is React? 
+Just a server-side framework 
+Just a user-interface framework 
+Both a server-side framework as well as a user-interface framework 
+ANS : C
+
+Q 11.What keyword is used to apply all of the properties on one interface to another interface? 
+implements 
+extends 
+class 
+furthers 
+references 
+ANS B
+
+Q.what does pop() do 
+ans: it deletes the frist element
+
+Q 26 - By default a bean is lazily loaded.  
+A - True  
+B - False 
+
+4) What is continuous testing? 
+Testing continuously for 24 hours 
+Manually testing each build, end-to-end 
+Automated testing 
+Automated testing on each continuous deployment 
+ANS : D
+
+14) GIT can be integrated with Jenkins. 
+True 
+False 
+ANS : A
+
+8) Which element is used to restrict the access to a particular URL within Spring Security ?  
+i. restrict-url 
+ii.intercept-url 
+iii.intercept-restrict.  
+ANS : B  
+
+16) Sharding a MongoDB database across many server instances can be achieved with ____  
+A.LAN 
+B.SAN. 
+C.MAN 
+ANS : LAN A 
+
+31) Which of the following is the immutable Java List static factory method ?  
+A. List.of  
+B. List.immutable.  
+C. List.create  
+ANS : - A 
+
+
+33) Which Java Class has natural sorting implemented ?  
+A. LinkedHashSet.  
+B. TreeSet  
+C.HashSet 
+ANS :- B -> TreeSet
+
+30. What is React in MVC ?  
+A. Controller 
+B. Middleware  
+C. Model  
+D. Router 
+
+31) What is React?  
+Just a server-side framework  
+Just a user-interface framework  
+Both a server-side framework as well as a user-interface framework  
+ANS : C 
+
+12.Which of the following is not built-in pipe in Angular 
+A) DatePipe 
+B) CurrencyPipe  
+C) DataPipe 
+D) PercentPipe 
+Ans: C 
+
+5) Which Annotation is used to refer to Pointcuts 
+A. @PointCut. 
+B. @PointCutExecution. 
+C. @PointCutBefore. 
+ANS :- A
+
+20.REST service endpoint comprises of which address? Starts with http:// and may end 
+with? 
+Starts with http:// and may end with? 
+No certain URL is specified 
+Depends upon the platform used 
+ANS : A
+
+23.Microservices is most closely related to which other established acronym?   
+API 
+AWS 
+GCP 
+PAAS 
+ANS : A
+
+27.What is the return type of Java lambda expressions?  
+void 
+Lambda 
+Function 
+Regex 
+ANS : C
+
+Which tag is used to define a clickable image map in HTML5? 
+a) <map> 
+b) <area> 
+c) <img> 
+d) <figure> 
+Answer: a) <map> 
+
+6. Spring Web MVC (and in Spring in general) is the "Open for extension, closed for modification" principle.The reason that this principle is being mentioned here is because a number of methods in the core classes in Spring Web MVC are marked final.
+
+
+A.true 
+B.false
+Answer: True
+
+
+95. Which implementation of Set would you choose if you want the iterator of Set to give objects in the order they were inserted?
+a) LinkedHashSet  
+b) TreeSet  
+c) HashSet  
+Answer: a) LinkedHashSet
+
+
+
+19.	REST service endpoint comprises of which address?
+Ans : Starts with http:// and may end with ?
+
+37.	Q.)Overriding can be done in?
+Poly
+Abstr
+Inher
+Encaps
+Ans. polymorphism
+
+
+
+48.	Which class indicates a dropdown menu?
+a) .dropdown-list
+b) .select
+c) .dropdown
+Ans: C
+
+Q)  answer Array.splice()
+
+
+Q)     @After
+       @Before
+      @After return
+      All of the above---- answer
+
+Q)  o= fun
+console(o.constructure === fun)
+   true
+   false
+   0
+   1
+19.Which of the following will correctly import the items exported by this export statement?
+
+export { GetUser as GetLibraryUser, GetBook as GetLibraryBook };
+
+import TypeScript from './library';
+import namespace from './library';
+
+import { GetLibraryUser, GetLibraryBook } from './library';
+import { GetUser, GetBook } from './library';
+import all from './library';
+ANS : C
+
+
+What type of management does “Capped Collections” provide for inserted documents in MongoDB ?  
+A. in oreder to specifying them
+B. LIFO 
+C. LRU 
+D. MRU 
+ANS :- in oreder to specifying them
+
+ Java Functional Interface can be defined as_____.
+a Simple Abstract Markup
+b Simple Active Markup
+c Single Ambivalue Method
+d Single Abstract Method
+
+
+
+
+
+

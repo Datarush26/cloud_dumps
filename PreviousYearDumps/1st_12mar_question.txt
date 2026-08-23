@@ -1,0 +1,73 @@
+static code analysis for angular
+ng build
+ng serve
+ng lint-ans
+
+
+Default scope of the bean
+singleton-ans
+
+
+log4 parcel package are known
+logger
+parcel
+none of the above
+
+
+how to add anootation
+
+
+
+3.Annotation added as an input parameter to the handler method.  
+a) @PathVariable  
+b) @Path  
+c) @PathLocale  
+d) None of the mentioned  
+ans: a  
+
+
+
+. Which library allows the use of the "require" keyword in front-end code? 
+A. guid 
+B. Browserify 
+C. React 
+D. jQuery 
+
+7.Which of the following API is a MUST for every React Component ?  
+A. getInitialState. 
+B. render 
+C.renderComponent. 
+ANS : C.
+
+
+0. Using JdbcTemplate, what is the Spring provided class you will use for result set parsing and merging rows  
+into a single object? Select a unique answer.  
+a. ResultSetExtractor  
+b. RowMapper  
+c. RowCallbackHandler  
+d. ResultSetMapper  
+ans: B
+
+
+Q 26 - By default a bean is lazily loaded.  
+A - True  
+B - False  
+*
+1)2 object  p ={name:"annu"} o={name:"annu"} what is the output of p.equalsOf(O)
+
+2)given "text" how to match this with the pattern ans-pattern.test("text")
+
+3)fulx is one way binding true/false
+
+4)route can have multiple child true/false
+
+5)microservice at the gateway what it will do login/fault tolerance/
+
+
+6)in js we use addEventListener if we want to exit what what is the command    exit()/abort()/default prevent /prevent listener
+
+
+
+
+
+

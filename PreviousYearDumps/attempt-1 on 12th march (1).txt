@@ -1,0 +1,1045 @@
+Spring Questions
+
+1. Shutdown of IOC containers - Using registerShutDownHook
+2. <list> - wiring values and allows duplicates
+3. Log4J parlance each package name - logger
+4. Hibernate uses HibernateException and Jpa uses Persistence Exception - True
+5. Unit test is used to validate single domain class - True
+6. Lifecycle of JPA - all of the above
+7. Bean pattern names is used only in XML based where as it is not used in AspectJ based - True
+8. call stored procedures - simpleJDBCCall
+
+
+
+9. You indicate a class selector with 
+A.the hash (#) symboL 
+B.the dot (.) 
+C.the tag 
+ANS : B 
+
+micro service -all
+
+docktype html
+
+props and states
+
+49. In Angular routing , which of these tags is used to show the selected route 
+component dynamically ? 
+A. <router></router> 
+B.<router-output></router-output> 
+C.<router-outlet></router-outlet> 
+D.<router-input></router-input>  
+ANS : C
+row mapper
+render component
+
+40.Which of the following is the correct syntax for two-way binding? 
+A.([ngModel])='listFilter' 
+B.[(ngModel)]='listFilter'  
+C.{{listFilter}} 
+D.ngModel='listFilter' 
+ANS : B 
+
+42. When you apply an Angular ‘pipe’ , it changes the value of the underlying component’s member variable as well.  
+A . TRUE. 
+B.  FALSE. 
+ANS :- B.  
+
+44. In Angular, how can you set a header in every http request ?  
+A. Use HttpClientInterceptor.  
+B. Extend HttpClient class.  
+C. Set as a request header parameter.  
+ANS : A.  
+
+47. In Angular , one can create a local HTML reference of an HTML tag using a variable , which starts with character ___ .  
+A. @  
+B. #  
+C. * 
+D. &
+
+
+49. In Angular routing , which of these tags is used to show the selected route component dynamically ?  
+A. <router></router> 
+B. <router-output></router-output> 
+C. <router-outlet></router-outlet>  
+D. <router-input></router-input>  
+ANS : C 
+
+
+Q 6 - How to handle shut down of IoC containers? 
+A - Using shutdownHook() 
+B - Using shutdownHandler() 
+C - Using registerHook() 
+D - Using registerShutdownHook() 
+Answer:D 
+
+
+ 10 - Which class is used to map a database row to a java object in spring? 
+A - ResultSet 
+B - RowMapper 
+C - RowSetMapper 
+D - ResultSetMapper 
+Answer:B
+
+
+Q 18 - Which is the way to provide configuration metadata to spring?  
+A - XML Based configuration file.  
+B - Annotation based configuration.  
+C - Java based configuration.  
+D - All of the above.  
+D 
+
+75.) The four kinds of class members are______ 
+a) Instance methods, Instance fields, Static method, Dynamic method 
+b) Instance fields,Instance methods, Class fields, class methods 
+c) Instance fields, non-Instance fields, Dynamic methods, Global methods 
+d) Global methods, Local methods, Dynamic methods, Static methods 
+Ans: B 
+
+What is the premise of equality for IdentityHashMap? 
+Name equality 
+Hashcode equality 
+Length equality 
+Reference equality 
+ANS :- D 
+
+5) Which Annotation is used to refer to Pointcuts.  
+A. @PointCut.  
+B. @PointCutExecution. 
+C. @PointCutBefore. 
+ANS :- A  
+
+14) A logger location where logging information is sent is called  
+1. appender.  
+2. logger  
+3. component.  
+ANS : appender A 
+
+
+
+38) Which of the following statements is true about microservices architecture ?  
+i. Microservices applications are required to be deployed on the same physical host. 
+ii. Microservices architecture supports high availability of individual microservices.  
+iii. Microservices cannot be used if a company is embracing DevOps.  
+iv. Microservices are designed using a bounded context that can communicate with other bounded contexts.  
+A. Only i  
+B. Only ii  
+C. Only ii and iv 
+D. All of the above.  
+Ans -> D 
+
+53) To use the Angular HttpClient component, you must import the ____ module.  
+A. HttpClientModule.  
+B. HttpModule.  
+C. Http  
+Ans :- A  
+
+
+
+54) In Angular , one can create local HTML reference or HTML tag using variable which starts with character ____  
+A. @  
+B. # 
+C. “ 
+D. & 
+ANS :- B 
+
+
+2. In Java, which of the following can be marked static? 
+a) Methods, Variables, Initialization Blocks, Outer Classes, and Nested Classes 
+b) Methods, Variables, Initialization Blocks, and Nested Classes 
+c) Methods, Variables, Initialization Blocks, and Outer Classes 
+d) Methods, Variables, and Initialization Block 
+Answer: b) Methods, Variables, Initialization Blocks, and Nested Classes
+
+
+7. What is the max capacity of a Java Blocking Queue? 
+a) Integer.INFINITY 
+b) Integer.MAX_VALUE 
+c) BigDecimal.MAX_VALUE 
+Answer: b) Integer.MAX_VALUE 
+
+
+31. Which Java Set implementation is sorted and synchronized? 
+a) TreeSet 
+b) LinkedHashSet 
+c) HashSet 
+d) ConcurrentSkipListSet 
+Answer: d) ConcurrentSkipListSet 
+
+43. Which one of the following statements on Java String is correct? 
+a) replace() method replaces only first occurrences of a character in invoking string with the 
+given character. 
+b) replace() method replaces last occurrence of a character in invoking string with the given 
+character. 
+c) replace() method replaces all occurrences of one character in invoking string with the 
+given character. 
+d) replace() method replaces all the characters in invoking string with the given character. 
+Answer: c) replace() method replaces all occurrences of one character in invoking string with 
+the given character.
+
+What annotation wiring element is added to scan packages to find and 
+register beans with in the Application Context?
+a <context:annotation-config/>
+b <context:annotation-scan/>
+c <context:component-config/>
+3. Spring
+7
+d <context:component-scan>
+Answer
+d. <context:component-scan
+
+
+54.Which of the following API is a MUST for every React component? render 
+getInitialState 
+render 
+renderComponent 
+ANS : B 
+
+51.What are the limitations of React?  
+React is only for view layer of the app so we still need the help of other technologies to 
+get a complete tooling set for development. 
+React uses inline templating and JSX. This can seem awkward to some developers. 
+The library of React is too large. 
+All of the above 
+ANS : D 
+
+
+
+Which class is introduced in Java 8 to get the current milliseconds?
+a. Clock
+b. Current Time
+
+c. Date Time
+d. Time
+
+v Explanation:
+The class introduced in Java 8 to get the current milliseconds is:
+1. Clock
+
+
+->Redux is a single dimension insertion
+
+->Flux has only one dispatcher
+
+->How can you access the state of a component from inside of a member function in React? 
+this.getState() 
+this.prototype.stateValue 
+this.state 
+this.values 
+
+->we can use ES6 classes for creating components (T/F)
+
+->which of the following are proper Routing for homepage	
+	<Route exact path="/" render{()=>{//}}
+	<Route path="/" render{()=>{//}}
+	<Route path="/" component={<Homepage/>}
+
+->states can be passed from outside components using - props
+
+->Docker container is an instance of docker image - (T/F)
+
+->Docker cannot have multiple containers of a single image - (T/F)
+
+->What is the replacement for PermGen space in java8?
+a. FixedGen
+b. Metaspace
+c. MetaGenspace
+
+->  In Java, which of the following data structure classes CANNOT be type 
+parameterized?
+a List
+b Set
+cArray
+dMap
+
+->What is the difference between peak() and dequeue()?
+a Peek() returns the next item in line but dequeue() removes and returns the 
+next item in line
+b peek() and dequeue() return the next item in line
+c peek() and dequeue remove and return the next item in line
+
+->Dependancy injection Router qn
+
+
+->PointCut cannot be???
+
+
+->how to get background zebra striped (HTML)
+
+->how to mark checkbox in input (HTML)
+
+
+
+->SpringBoot can use repository from (Spring)
+	Maven
+	Gradle
+	npm
+
+
+->you can create object using new keyword and ___ method - (JS)
+
+->Which PointCut annotation executes after a joinpoint is over?
+
+
+
+1.Which of the following is not built-in pipe in Angular 
+A) DatePipe 
+B) CurrencyPipe  
+C) DataPipe (correct)
+D) PercentPipe 
+
+in angular <router-outlet> atmost only one (t or f)
+
+
+2.A logger location where logging information is sent is called  
+1. appender.  
+2. logger  
+3. component.  
+ANS : appender
+
+3.Which element is used to restrict the access to a particular URL within Spring 
+Security ? 
+i. restrict-url 
+ii.intercept-url (correct)
+iii.intercept-restrict.
+
+
+4.What theorem or principal MongoDB follows? (like this but question diff)
+A.APAC 
+B.Always-Sync  
+C.ASCII  
+D.CAP (correct)
+
+
+5.Which of the following is the correct CSS syntax to set the background color of an element?
+
+Ans: element { background-color: red; }
+
+
+6.Which class indicates a dropdown menu? 
+a) .dropdown-list 
+b) .select 
+c) .dropdown (correct)
+
+7.which syntax is correct :
+ans-limit()
+
+8.How can we render JSX in the browser ?  
+i. Using Babel  
+ii. Using Typescript.  
+iii. Using Flux.  
+iv. Using Redux.  
+A. Only i and ii  
+B. Only iv 
+C. Only i,ii and iv 
+D. Only iii and iv. 
+ANS : A  
+
+
+9.What is the max capacity of a Java Blocking Queue?
+a Integer.INFINITY
+b Integer.MAX_VALUE (correct)
+c BigDecimal.MAX_VALUE
+
+10.Which one is NOT a spring data MongoDB annotation ?  
+A. @Document 
+B. @Field 
+C. @Entity 
+D. @Query. 
+ANS :  @Entity 
+
+
+11.Which of the following is NOT a valid keyword in JavaScript?
+
+Options:
+A) use strict
+B) debugger
+C) with
+D) if
+
+Answer: A) use strict
+
+12.Can a single Docker image be used to create only one container?
+
+Options:
+A) True
+B) False
+
+Correct Answer: B) False
+
+
+13.A Docker container contains all the application files but does not include the instructions required to run the application.
+
+Options:
+A) True
+B) False
+
+Correct Answer: B) False
+
+
+14.Which of the following statements about Join Point and Advice in Aspect-Oriented Programming (AOP) is correct?
+
+ans: Join Point is a point in program execution where an aspect can be applied, and Advice is the action performed at that point.
+
+15.Which of the below methods are NOT a part of React Component’s lifecycle ?  
+A. Initial Rendering. 
+B. Render / Re-Render.  
+C. unMounting. 
+D. Remote URL calls.  (correct)
+
+8.Which button class is used to create a large button? 
+a).btn-lg  b).btn-xl   c).btn-l d).btn-large 
+9.Which class indicates a dropdown menu? 
+a).dropdown-list  b).dropdown c).select
+Where can the <script> tag be added in HTML? 
+Options: 
+* Head 
+* Body 
+* Both 
+Answer: Both head and body
+How to change bold formate
+font-size B)font-style C)text-style D)text-format  
+15.Syntax for large buttons in Bootstrap?  
+A).large   
+B).button-large
+Bt
+5.Which of the following CSS Property controls how an element is positioned? 
+A.position 
+B.set 
+C.static
+ 
+ANS : A
+ 
+12) Which of the following rules allows users to import style rules from other style sheets? 
+A.@media 
+B.@important 
+C.@import
+
+
+.container question
+
+mongodb remove() qn
+
+which relationship is used in mongodb to connect document - 1:1 embedded document
+1:many embedded document
+1:many  document reference
+
+in sql table similiar in mongodb? collections
+
+How to check if the pattern matches with the string "text" in JavaScript - Ans. pattern.test("text")
+
+What is closure in JavaScript - Ans. Both Function Object and Scope ...
+
+What JSONP stands for - JSON with padding
+
+const obj = {
+	obj.foo;
+}
+obj.bar;
+error----ans
+
+scope of var is block
+scope of let is block 
+
+
+what defines docker - all of the above
+
+
+48. Spring Boot: What is the default embedded server? 
+a) Jetty 
+b) Tomcat 
+c) Undertow 
+d) Netty 
+Answer: b) Tomcat
+
+
+ Where is the correct place to insert a Javascript ?  
+A. The <head> section 
+B. Both the <head> section and the <body> section are correct. 
+C. The <body> section. 
+D. The <footer> section. 
+
+ You can also use an ES6 class to define a component in React. 
+True 
+False 
+
+What are the variable scopes available in TypeScript? 
+A. Global Scope 
+B. Class Scope 
+C. Local Scope 
+D. All of the above 
+
+ Ques. Bootstrap’s grid system allows up to 
+a. 6 columns across the page 
+b. 12 columns across the page 
+c. columns across the page 
+d. columns across the page 
+
+) What does it mean by publishing a REST service in Spring ?  
+i. Publishing an application’s data as Json over a REST service.  
+ii.Publishing an application’s data as XML over a REST service.  
+Iii. Sharing Database within two microservices using Spring Data Access Object (DAO).  
+A. Only 1 
+B. Only 1 and 2 
+C. Only 2 
+D. All of the above.  
+
+ A logger location where logging information is sent is called  
+1. appender.  
+2. logger  
+3. component. 
+
+ In MongoDB, which of the following methods return one document ?  
+A. findOne() 
+B. findOne1() 
+C. selectOne() 
+
+ Identify the incorrect statement on MongoDB.  
+A. Secondary indices are not available in MongoDB.  
+B. MongoDB supports search by field, range queries, and regular expression searches.  
+C. MongoDB can store the business subject in the minimal number of documents. 
+
+How can we render JSX in the browser ?  
+i. Using Babel  
+ii. Using Typescript.  
+iii. Using Flux.  
+iv. Using Redux.  
+A. Only i and ii  
+B. Only iv 
+C. Only i,ii and iv 
+D. Only iii and iv.
+
+ Is the following a valid Java code snippet ?  
+Optional< String > aValue = Optional.of(“Not Empty”); 
+if(aValue.isPresent()) { 
+System.out.println(“Got Not Empty”); 
+} 
+A. True 
+B. False  
+
+In Java Optional.ofNullable() method of the Optional Class, returns a Non-empty Optional if the given object has a value, 
+otherwise it returns an empty Optional.  
+A. true 
+B.false
+
+ Load Balancing improves the distribution of workloads across multiple computing resources , such as computers or a 
+computer cluster.  
+A. True.  
+B. False.
+
+what are the components of redux - action reducer and store
+
+ Which is the correct CSS Syntax ?  
+A. body color-black 
+B. {body color-black} 
+C. body {color:black;} 
+D. {body;color;black} 
+
+Which Bootstrap class adds zebra-stripes to a table ?  
+A. table-bordered. 
+B. table-zebra. 
+C.table-stripped 
+D.even and odd  
+
+ How can you detect the client’s browser name in Javascript ?  
+A. class.navName 
+B. navigator.appName 
+C. browser.name 
+D. window.browser. 
+
+ In Java, which of the following can be marked static?
+aMethods, Variables, Initialization Blocks, Outer Classes, and Nested Classes
+bMethods, Variables, Initialization Blocks, and Nested Classes
+cMethods, Variables, Initialization Blocks, and Outer Classes
+dMethods, Variables, and Initialization Block.
+
+Java system properties can be set or modified at runtime.
+aTrue
+b False
+
+Which one will allow traversing a Java collection in each direction?
+a ListIterator
+b Iterator
+cMapIterator
+d SetIterator
+
+ In Java, it is NOT possible to override default serialization.
+a True
+b False
+
+Java Functional Interface can be defined as_____.
+a Simple Abstract Markup
+b Simple Active Markup
+c Single Ambivalue Method
+d Single Abstract Method
+
+Which class is introduced in Java 8 to get the current milliseconds?
+aClock
+bCurrent Time
+cDate Time
+d Time
+
+ In Java, Which of these class types supports sequential and parallel 
+processing of data?
+aQueue
+b Lambda
+c ExecutorService
+d Streams
+
+Java Stream does NOT store the elements. It simply performs the aggregate 
+operations to get the desired stream of data.
+aTrue
+b False
+
+What is the return type of Java Lambda expressions?
+aVoid
+b Lambda
+c Function
+d Regex
+
+Spring Web MVC (and in Spring in general) is the "Open for extension, 
+closed for modification" principle. The reason that this principle is being 
+mentioned here is because a number of methods in the core classes in 
+Spring Web MVC are marked final.
+a true
+b false
+
+A collection value of the type java.util.Properties is defined by what 
+element?
+a <props>
+b <prop>
+c <properties>
+d <property>
+
+
+Rakesh
+ 
+Q 8 - By default a bean is lazily loaded. 
+
+A - True 
+
+B - False 
+
+Answer : B
+ 
+6. What React function is used to define a new element tag? 
+
+A. renderComponent 
+
+B. createClass 
+
+C. setInnerHTML 
+
+ANS : B
+ 
+12. React is 
+
+A A library that represents asynchronous data streams with observables 
+
+B A comprehensive client-side application framework 
+
+C An optimizing compiler for JavaScript 
+
+D A client-side library providing rendering and event handling 
+
+ANS : D
+ 
+27.Which of the following API is a MUST for every React Component ?  
+
+A. getInitialState. 
+
+B. render 
+
+C.renderComponent. 
+
+ANS : C.
+ 
+30. What is React in MVC ?  
+
+A. Controller 
+
+B. Middleware  
+
+C. Model 
+
+D. Router  
+
+ANS :- None of these. Updated ans is Controller. Option A
+ 
+31) What is React? 
+
+Just a server-side framework 
+
+Just a user-interface framework 
+
+Both a server-side framework as well as a user-interface framework 
+
+ANS : C
+ 
+32) What are the limitations of React? 
+
+React is only for the view layer of the app so we still need the help of other technologies to get a complete tooling set for 
+
+development. 
+
+React uses inline templating and JSX. This can seem awkward to some developers. 
+
+The library of React is too large. 
+
+All of the above 
+
+ANS :- D
+ 
+33) How can you access the state of a component from inside of a member function in React? 
+
+this.getState() 
+
+this.prototype.stateValue 
+
+this.state 
+
+this.values 
+
+ANS : D
+ 
+34) You can also use an ES6 class to define a component in React. 
+
+True 
+
+False 
+
+ANS : A
+ 
+35) Which of the following API is a MUST for every React component? 
+
+getInitialState 
+
+render 
+
+renderComponent 
+
+ANS : C
+ 
+16.Which of the following are array methods 
+
+A.Unshift() 
+
+B.Sort() 
+
+C.Pop() 
+
+D.All the above
+ 
+12.Which of the following is not built-in pipe in Angular 
+
+A) DatePipe 
+
+B) CurrencyPipe 
+
+C) DataPipe 
+
+D) PercentPipe 
+
+Ans: C
+ 
+41. In Angular / RxJs , when should you unsubscribe from a Subscription ?  
+
+A. There is no need to unsubscribe . Angular routing handles it.  
+
+B. Unsubscribe them in ngOnDestroy.  
+
+ANS :- B.
+ 
+12. Publishing an application’s data as a REST service requires.  
+
+a) @RequestMapping  
+
+b) @PathVariable  
+
+c) All of the mentioned  
+
+d) None of the mentioned  
+
+ans: a b  
+ 
+Q 8 - By default a bean is lazily loaded. 
+
+A - True 
+
+B - False 
+
+Answer : B
+ 
+2. ____________ contains the navigation menu, or other navigation functionality for the page 
+
+A.section 
+
+B.header 
+
+C.nav 
+
+D.aside 
+
+ANS : C
+ 
+25. What is advice? Select a unique answer.  
+
+a. An action taken by an aspect at a particular join point  
+
+b. A point during the execution of a program  
+
+c. An aspect and a pointcut  
+
+d. A predicate that matches join points  
+
+ans: a  
+ 
+70.) ----- is an HTML specification used to add more information to HTML tags. 
+
+A) Macrodata 
+
+B) Microdata 
+
+c)Minidata 
+
+d) Modifydata 
+
+Ans: B
+ 
+3) How would you limit the results of a find to 10 items? 
+
+adb.collection.find({},{limit:10}) 
+
+db.collection.find().limit(10) 
+
+db.collection.limit(query, 10) 
+
+This is not possible in the node.js driver 
+
+ANS : B
+ 
+28) Which of the following is not a callback method of React ?  
+
+A. render() 
+
+B. componentDidMount() 
+
+C. componentFailedToMount() 
+
+D. componentWillunMount() 
+
+ANS : C -> failedtomount
+ 
+32) Which of the following statements are true about Java ?  
+
+i. A finally block is executed, only after the catch block is executed.  
+
+ii. A finally block is executed whether an exception is thrown or not.  
+
+iii. A finally block is NOT Mandatory.  
+
+iv. A finally block is executed, only if an exception occurs.  
+
+A. i 
+
+B. iv  
+
+C. i and iv  
+
+D. ii and iii  
+
+ANs :- D
+ 
+33) Which Java Class has natural sorting implemented ?  
+
+A. LinkedHashSet.  
+
+B. TreeSet  
+
+C.HashSet 
+
+ANS :- B -> TreeSet
+ 
+49) Which of the following methods CANNOT be used to add array elements in Javascript ?  
+
+A. push() 
+
+B. splice() 
+
+C. shift()  
+
+D. All can be used.  
+
+ANS : D
+ 
+ 
+53) To use the Angular HttpClient component, you must import the ____ module.  
+
+A. HttpClientModule.  
+
+B. HttpModule.  
+
+C. Http  
+
+Ans :- A
+ 
+ Identify the parts of lambda expression in Java.
+
+aName
+
+b Parameterlist
+
+c Body
+
+d ReturnType
+
+1.i
+
+2.iv
+
+3.i and iv
+
+4.
+
+ii and iii
+ 
+ Java Functional Interface can be defined as_____.
+
+a Simple Abstract Markup
+
+b Simple Active Markup
+
+c Single Ambivalue Method
+
+d Single Abstract Method
+ 
+ 
+Which of the following types of Java methods CANNOT be Type 
+
+parameterized?
+
+a Final methods
+
+bOverriding methods
+
+22
+
+1. Core Java
+
+cOverloaded methods
+ 
+What is the replacement for PermGen space in java8?
+
+a. FixedGen
+
+b. Metaspace
+
+c. MetaGenspace
+ 
+What is the return type of Java Lambda expressions?
+
+aVoid
+
+b Lambda
+
+c Function
+
+d Regex
+ 
+Q 32 - What is the scope of stateless beans?  
+
+A - global-session  
+
+B - singleton  
+
+C - prototype  
+
+D - request  
+
+B  
+ 
+ 
+Js- Ananya
+
+1.closure
+
+2.code snippet:
+
+const obj{
+
+obj.foo}
+
+obj.bar;
+
+3.
+ 
+57. DevOps: What is Infrastructure as Code? a) Manual server setup b) Defining infrastructure using scripts c) Database management d) Application deployment  
+ 
+React is server-side rendering?
+Options:- True/False
+ANS;- True
+ 
+
+
+
+
+what is the feature of the canvas -to design for graphics (something)
+
+
+which is not used to add the elements to an array 
+push
+shift
+splice
+all---ans
+
+ which of the following is the consider to be end rest ?
+|
+,
+{}
+
+which one will allow traversing a java collection in each direction?
+ListItertor----ans
+Iterator
+MapIterator
+SetIterator
+
+The ___ javascript method like the mathematical "for all" quantifier, which resumes true if the function returns true for all elements in the array.
+every()---ans
+some()
+all()
+forall()
+
+which of these angular services can be injected in your componentto dynamic mode navigation?
+Routing
+RouterService
+RoutingService
+Router-----ans
+
+Optional<String>aValue=optional.of("Not Empty");
+If(aValue.ifPresent()){
+System.out.println("Got Not Empty");
+}
+True
+False----ans
+
+what is the difference between peak() and dequeue()?
+peek() returns the next item in line but dequeue() removes and returns the next item in line----ans
+peek() and dequeue() return the next item in line
+peek() and dequeue remove and return the next item in line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
